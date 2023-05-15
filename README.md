@@ -68,4 +68,11 @@ O projeto conta com 3 frentes:
 
             3. Método DELETE: Podemos deletar um jogador do banco de dados, enviando o id do mesmo na url após "jogadores/"
             4. Não foi criado o método PUT devido ao tamanho decidido do projeto durante a fase de idealização 
+            
+            Devido ao tamanho do projeto, não foi criado a rota de cadastrar coachs.
     
+  <li> 3. Página WEB </li>
+              
+            A pagina WEB foi criada a fim de cadastrar times e jogadores dentro do banco de dados.
+            Nela podemos ver um ambiente bonito e com muitos elementos de JavaScript.
+                
