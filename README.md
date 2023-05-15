@@ -11,7 +11,7 @@ pip install sqlalchemy
 O projeto conta com 3 frentes:
   1. Banco de Dados
       Banco de dados com os seguintes dados:
-        a. Table Times:
+        a. Table Times
         
           1. nome : str
           2. cidade : str
