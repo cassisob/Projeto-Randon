@@ -1,0 +1,20 @@
+TIME
+ID**
+CIDADE
+
+JOGADORES
+    ID**
+    NOME
+    NICK
+    PATENTE
+    POSIÇÃO
+    LINK STEAM
+    LINK GAMERS CLUB
+    LINK FACEIT
+    TIME__
+
+COACH
+    ID**
+    NOME
+    NICK
+    TIME__

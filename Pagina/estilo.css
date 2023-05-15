@@ -1,0 +1,57 @@
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(209, 209, 209);
+}
+
+ul.navbar {
+    position: fixed;
+    width: 100%;
+    list-style-type: none;
+    margin-top: -0px;
+    overflow: hidden;
+    background-color: #333;
+  }
+  
+li.navbar-itens {
+    float: right;
+}
+  
+li a.navbar-itens-texto {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+  
+
+li.navbar-itens a:hover {
+    background-color: #111;
+}
+
+div.comeco {
+    background-image: url("Imagens/nuke.jpg");
+    padding-top: 0;
+}
+
+h1.comeco {
+    text-align: center;
+    color: aliceblue;
+    font-size: 1000%;
+    margin: 0;
+    padding-top: 8vh;
+    padding-bottom: 5vh;
+}
+
+div.formulario {
+    width: 100%;
+    padding-top: 5vh;
+    position: absolute;
+    text-align: center;
+}
+
+div.forms {
+    display: inline-block;
+    position: relative;
+}

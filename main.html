@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Projeto Randon</title>
+
+        <link rel="stylesheet" type="text/css" href="Pagina/estilo.css">
+    </head>
+
+    <body>
+        <div>
+            <ul class="navbar">
+                <li class="navbar-itens" style="float: left; margin-left: 10%;"><a class="navbar-itens-texto" href="#teste">Home</a></li>
+                <li class="navbar-itens" style="margin-right: 15%;"><a class="navbar-itens-texto" href="#teste">Novidades</a></li>
+                <li class="navbar-itens"><a class="navbar-itens-texto" href="#teste">Contato</a></li>
+                <li class="navbar-itens"><a class="navbar-itens-texto" href="#teste">Sobre</a></li>
+            </ul>
+        </div>
+
+        <div class="comeco">
+            <h1 class="comeco">Cadastre sua Equipe</h1>
+        </div>
+        <div class="formulario">
+            <div>
+                <form class="forms">
+                    <label>Time: </label><input id="nome">
+                    <label>Cidade: </label><input id="cidade">
+                    <label>Temos reserva? </label><input type = "checkbox" id = "reserva">
+                </form>
+            </div>
+
+            <h1 id="jogadorTexto"> JOGADOR 1</h1>
+
+            <div>
+                <form>
+                    <p>Insira o nome do jogador:</p>
+                    <input id="jogador">
+                    <p>Insira o nick:</p>
+                    <input id="nick">
+                    <p>Digite a patente</p>
+                    <input id="patente">
+                    <p>Digite a função do jogador</p>
+                    <input id="funcao">
+                    <p>Cole o link do perfil da Steam do jogador</p>
+                    <input id="steam">
+                    <p>Cole o link do perfil da GamersClub do jogador</p>
+                    <input id="gamersclub">
+                </form>
+
+                <button onclick="cadastrarTime(document.getElementById('nome').value);"> Enviar </button>
+            </div>
+        </div>
+        
+
+
+
+
+
+        <script>
+
+            var acum = 1
+
+            async function cadastrarTime(time) {
+
+                let _data = {
+                    nome: document.getElementById("nome").value,
+                    cidade: document.getElementById("cidade").value
+                }
+
+                fetch('http://127.0.0.1:8000/times', {
+                    method: "POST",
+                    body: JSON.stringify(_data),
+                    headers: {"Content-type": "application/json; charset=UTF-8"}
+                })  
+                .then(response => response.json())
+
+                document.getElementById('nome').disabled = true
+                document.getElementById('cidade').disabled = true
+
+                procurarTime(time)
+            }
+
+            async function procurarTime(time) {
+                
+                console.log(time)
+
+                var URL = 'http://localhost:8000/times/?search=' + time
+                console.log(URL)
+
+                var objeto = await fetch(URL, {
+                    method: 'get'
+                })
+                .then((response) => {return response.json()})
+            
+                cadatrarJogadores(objeto)
+            }
+
+
+            async function cadatrarJogadores(objeto) {
+
+                let _data = {
+                    nome: document.getElementById("jogador").value,
+                    nick: document.getElementById("nick").value,
+                    patente: document.getElementById("patente").value,
+                    funcao: document.getElementById("funcao").value,
+                    steam: document.getElementById("steam").value,
+                    gamersClub: document.getElementById("gamersclub").value,
+                    time_id: objeto[0].id
+                }
+
+                console.log(JSON.stringify(_data))
+
+                acum = await acum + 1
+
+                console.log(acum)
+                
+                if (acum <= 6) {
+                    fetch('http://127.0.0.1:8000/jogadores', {
+                        method: "POST",
+                        body: JSON.stringify(_data),
+                        headers: {"Content-type": "application/json; charset=UTF-8"}
+                    })  
+                    .then(response => response.json())
+                    .then(json => console.log(json))
+                    .catch(err => console.log(err));
+
+                    document.getElementById("jogador").value=""
+                    document.getElementById("nick").value=""
+                    document.getElementById("patente").value=""
+                    document.getElementById("funcao").value=""
+                    document.getElementById("steam").value=""
+                    document.getElementById("gamersclub").value=""
+
+                    document.getElementById('jogadorTexto').innerHTML = "JOGADOR " + acum
+
+                } else {
+                    acum = 1
+
+                    document.getElementById("jogador").value=""
+                    document.getElementById("nick").value=""
+                    document.getElementById("patente").value=""
+                    document.getElementById("funcao").value=""
+                    document.getElementById("steam").value=""
+                    document.getElementById("gamersclub").value=""
+
+                    document.getElementById('nome').disabled = falso
+                    document.getElementById('cidade').disabled = falso
+                    document.getElementById('nome').value=""
+                    document.getElementById('cidade').value=""
+
+                    document.getElementById('jogadorTexto').innerHTML = "JOGADOR 1"
+
+                }
+
+            }
+            
+        </script>
+
+    </body>
+</html>
