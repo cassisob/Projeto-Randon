@@ -33,7 +33,8 @@ O projeto conta com 3 frentes:
           3. time_id : int (chave estranjeira para relacionar o jogador com o time)
           4. id : int (chave primaria)
   
-  2. API
+  <ol>
+   2. API
       <ol> API feita em Python com FASTAPI
       <li>http://localhost:8000/times/ </li>
         
