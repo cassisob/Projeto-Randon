@@ -10,13 +10,13 @@ Para rodar o projeto intale as seguintes biliotecas com pip:
 
 O projeto conta com 3 frentes:
   1. Banco de Dados
-      Banco de dados com os seguintes dados:
-        <ol> a. Table Times
+      <ol> Banco de dados com os seguintes dados:
+        a. Table Times
         
           1. nome : str
           2. cidade : str
           3. id : int (chave primaria)
-        <ol> b. Table Jogador
+        b. Table Jogador
         
           1. nome : str
           2. nick : str
@@ -26,7 +26,7 @@ O projeto conta com 3 frentes:
           6. gamersClub : str
           7. time_id : int (chave estranjeira para relacionar o jogador com o time)
           8. id : int (chave primaria)
-       <ol> c. Table Coach
+       c. Table Coach
        
           1. nome : str
           2. nick : str
