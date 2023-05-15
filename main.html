@@ -86,30 +86,25 @@
                     })  
                     .then(response => response.json())
 
-                    if (document.getElementById('reserva').value.checked == true) {
-                        quantidadeJogadores = await 6
-                    } else {
-                        quantidadeJogadores = await 5
+                    if (document.getElementById('reserva').checked == true) {
+                        console.log("oi")
+                        quantidadeJogadores = 6
                     }
 
                     document.getElementById('nome').disabled = true
                     document.getElementById('cidade').disabled = true
-                    document.getElementById('reserva').disabled = 
+                    document.getElementById('reserva').disabled = true
                     
                     _data = {}
 
-                    cadastrado = await 0
+                    cadastrado = 0
                 }
-
-                console.log(await cadastrado)
 
                 procurarTime(time)
             }
 
             async function procurarTime(time) {
-                
-                console.log(time)
-
+            
                 var URL = 'http://localhost:8000/times/?search=' + time
                 console.log(URL)
 
@@ -135,9 +130,8 @@
                     time_id: objeto[0].id
                 }
 
-                console.log(JSON.stringify(_data))
 
-                acum = await acum + 1
+                acum = acum + 1
 
                 console.log(acum)
                 
@@ -148,7 +142,6 @@
                         headers: {"Content-type": "application/json; charset=UTF-8"}
                     })  
                     .then(response => response.json())
-                    .then(json => console.log(json))
                     .catch(err => console.log(err));
 
                     document.getElementById("jogador").value=""
@@ -170,7 +163,6 @@
                         headers: {"Content-type": "application/json; charset=UTF-8"}
                     })  
                     .then(response => response.json())
-                    .then(json => console.log(json))
                     .catch(err => console.log(err));
 
                     document.getElementById("jogador").value=""
@@ -185,7 +177,8 @@
                     _data = {}
                     
                     acum = 1
-                    cadastrado = await 1
+                    cadastrado = 1
+                    quantidadeJogadores = 5
 
                     document.getElementById("jogador").value=""
                     document.getElementById("nick").value=""
@@ -199,7 +192,7 @@
                     document.getElementById('reserva').disabled = false
                     document.getElementById('nome').value=""
                     document.getElementById('cidade').value=""
-                    document.getElementById('reserva').value=null
+                    document.getElementById('reserva').checked= false
 
                     document.getElementById('jogadorTexto').innerHTML = "JOGADOR 1"
 
