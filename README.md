@@ -2,11 +2,12 @@
 
 Projeto de teste by @cassisob
 
-Para rodar o projeto intale as seguintes biliotecas com pip:
+Para rodar o projeto é preciso seguir os seguintes passos:
 
 1. pip install fastapi
 2. pip install uvicorn
 3. pip install sqlalchemy
+4. uvicorn main:app --reload
 
 O projeto conta com 3 frentes:
     <li>1. Banco de Dados</li>
