@@ -59,6 +59,6 @@ O projeto conta com 3 frentes:
           9. }
               
             <li>3. Método DELETE: Podemos deletar uma equipe do banco de dados, enviando o id da mesma na url após "times/"
-       
+      
             
     
