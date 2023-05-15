@@ -36,10 +36,27 @@ O projeto conta com 3 frentes:
   2. API
     <ol> API desenvolvida em python com a biblioteca FASTAPI com as seguintes rotas
       <ol>a. http://localhost:8000/times/
-            <li>1. Método GET: Podemos solicitar todos os times cadastrados no banco de dados e com a extensão "?search=PALAVRA" naM URL podemos pesquisar por times especificos com a "palavra" como nome </li>
+            <li>1. Método GET: Podemos solicitar todos os times cadastrados no banco de dados e com a extensão "?search=PALAVRA" na URL podemos pesquisar por times especificos com a "palavra" como nome </li>
             <li>2. Método POST: Podemos adicionar adicionar times no banco de dados com o formato de JSON abaixo </li>
            {
             "nome": "string",
             "cidade": "string"
            }
+            <li>3. Método DELETE: Podemos deletar uma equipe do banco de dados, enviando o id da mesma na url após "times/"
+      <ol>
+      <ol> b. http://localhost:8000/jogadores/
+            <li>1. Método GET: Podemos solicitar todos os jogadores cadastrados no banco de dados e com a extensão "?search=PALAVRA" na URL podemos pesquisar por jogadores especificos com a "palavra" como nome </li>
+            <li>2. Método POST: Podemos adicionar adicionar jogadores no banco de dados com o formato de JSON abaixo </li>
+          {
+            "nome": "string",
+            "nick": "string",
+            "patente": "string",
+            "funcao": "string",
+            "steam": "string",
+            "gamersClub": "string",
+            "time_id": 0
+          }
+            <li>3. Método DELETE: Podemos deletar uma equipe do banco de dados, enviando o id da mesma na url após "times/"
+       
+            
     
