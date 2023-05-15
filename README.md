@@ -9,7 +9,7 @@ Para rodar o projeto intale as seguintes biliotecas com pip:
 3. pip install sqlalchemy
 
 O projeto conta com 3 frentes:
-  1. Banco de Dados
+1. Banco de Dados
       <ol>Banco de dados com os seguintes dados:
         <li>Table Times </li>
         
