@@ -41,3 +41,14 @@ def create(request: schemas.Jogador, db: SessionLocal = Depends(get_db)):
     db.refresh(novo_jogador)
 
     return novo_jogador
+
+@router.delete('/{id}')
+def destroy(id: int, db: SessionLocal = Depends(get_db)):
+    query = utils.checkLivroById(id, db)
+    
+    query.first().autores = []
+
+    query.delete(synchronize_session=False)
+    db.commit()
+
+    return Response(status_code=status.HTTP_204_NO_CONTENT)
