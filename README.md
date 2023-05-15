@@ -34,7 +34,6 @@ O projeto conta com 3 frentes:
           4. id : int (chave primaria)
   <ol>
   2. API
-    <ol> API desenvolvida em python com a biblioteca FASTAPI com as seguintes rotas
       <li>http://localhost:8000/times/ </li>
         
             1. Método GET: Podemos solicitar todos os times cadastrados no banco de dados e com a extensão "?search=PALAVRA" na URL podemos pesquisar por times especificos com a "palavra" como nome </li>
