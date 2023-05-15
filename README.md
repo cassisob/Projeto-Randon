@@ -48,7 +48,6 @@ teste
     <li> b. http://localhost:8000/jogadores/ </li>
             <li>1. Método GET: Podemos solicitar todos os jogadores cadastrados no banco de dados e com a extensão "?search=PALAVRA" na URL podemos pesquisar por jogadores especificos com a "palavra" como nome </li>
             <li>2. Método POST: Podemos adicionar adicionar jogadores no banco de dados com o formato de JSON abaixo </li>
-              
           1. {
           2.   "nome": "string",
           3.   "nick": "string",
