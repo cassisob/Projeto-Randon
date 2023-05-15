@@ -42,7 +42,7 @@ O projeto conta com 3 frentes:
             "nome": "string",
             "cidade": "string"
            }
-            <li>3. Método DELETE: Podemos deletar uma equipe do banco de dados, enviando o id da mesma na url após "times/"
+            <li>3. Método DELETE: Podemos deletar uma equipe do banco de dados, enviando o id da mesma na url após "times/"</li>
       <ol>
     b. http://localhost:8000/jogadores/
             <li>1. Método GET: Podemos solicitar todos os jogadores cadastrados no banco de dados e com a extensão "?search=PALAVRA" na URL podemos pesquisar por jogadores especificos com a "palavra" como nome </li>
