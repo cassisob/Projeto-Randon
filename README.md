@@ -10,7 +10,7 @@ Para rodar o projeto intale as seguintes biliotecas com pip:
 
 O projeto conta com 3 frentes:
   1. Banco de Dados
-      Banco de dados com os seguintes dados:
+      Banco de dados com os seguintes dados: \n
         a. Table Times
         
           1. nome : str
