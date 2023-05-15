@@ -36,6 +36,9 @@ O projeto conta com 3 frentes:
   2. API
     <ol> API desenvolvida em python com a biblioteca FASTAPI com as seguintes rotas
       <li>a. http://localhost:8000/times/ </li>
+      1.  
+      2.  
+      3. 
             1. Método GET: Podemos solicitar todos os times cadastrados no banco de dados e com a extensão "?search=PALAVRA" na URL podemos pesquisar por times especificos com a "palavra" como nome </li>
             2. Método POST: Podemos adicionar adicionar times no banco de dados com o formato de JSON abaixo
            {
