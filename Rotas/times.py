@@ -28,3 +28,12 @@ def create(request: schemas.Time, db: SessionLocal = Depends(get_db)):
     db.refresh(novo_time)
 
     return novo_time
+
+@router.delete('/{id}')
+def destroy(id: int, db: SessionLocal = Depends(get_db)):
+    query = utils.checarTimePorID(id, db)
+
+    query.delete(synchronize_session=False)
+    db.commit()
+
+    return Response(status_code=status.HTTP_204_NO_CONTENT)

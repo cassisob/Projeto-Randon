@@ -44,9 +44,7 @@ def create(request: schemas.Jogador, db: SessionLocal = Depends(get_db)):
 
 @router.delete('/{id}')
 def destroy(id: int, db: SessionLocal = Depends(get_db)):
-    query = utils.checkLivroById(id, db)
-    
-    query.first().autores = []
+    query = utils.checarJogadorPorID(id, db)
 
     query.delete(synchronize_session=False)
     db.commit()
