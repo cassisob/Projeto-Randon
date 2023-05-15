@@ -10,10 +10,10 @@
     <body>
         <div>
             <ul class="navbar">
-                <li class="navbar-itens" style="float: left; margin-left: 10%;"><a class="navbar-itens-texto" href="#teste">Home</a></li>
-                <li class="navbar-itens" style="margin-right: 15%;"><a class="navbar-itens-texto" href="#teste">Novidades</a></li>
-                <li class="navbar-itens"><a class="navbar-itens-texto" href="#teste">Contato</a></li>
-                <li class="navbar-itens"><a class="navbar-itens-texto" href="#teste">Sobre</a></li>
+                <li class="navbar-itens" style="float: left; margin-left: 10%;"><a class="navbar-itens-texto" href="#">Home</a></li>
+                <li class="navbar-itens" style="margin-right: 15%;"><a class="navbar-itens-texto" href="#">Novidades</a></li>
+                <li class="navbar-itens"><a class="navbar-itens-texto" href="#">Contato</a></li>
+                <li class="navbar-itens"><a class="navbar-itens-texto" href="#">Sobre</a></li>
             </ul>
         </div>
 
@@ -23,9 +23,17 @@
         <div class="formulario">
             <div>
                 <form class="forms">
-                    <label>Time: </label><input id="nome">
-                    <label>Cidade: </label><input id="cidade">
-                    <label>Temos reserva? </label><input type = "checkbox" id = "reserva">
+                    <div style="display: inline-block;">
+                        <h3>Nome da equipe</h3>
+                        <input class="times" id="nome" autocomplete="off" required > 
+                    </div>
+                    <div style="display: inline-block;">
+                        <h3>Cidade da equipe</h3>
+                        <input class="times" id="cidade" autocomplete="off" required > 
+                    </div>
+
+                    <p>Temos reserva?</p><input type="checkbox" id="reserva">
+
                 </form>
             </div>
 
@@ -46,19 +54,22 @@
                     <p>Cole o link do perfil da GamersClub do jogador</p>
                     <input id="gamersclub">
                 </form>
+                
 
                 <button onclick="cadastrarTime(document.getElementById('nome').value);"> Enviar </button>
             </div>
+
+
+            <div class="final">
+                <p style="margin: 0; color: white; font-size: large;">PROJETO TESTE BY CASSIANO JOSÉ SOBIERAI</p>
+            </div>
         </div>
-        
-
-
-
-
 
         <script>
 
             var acum = 1
+            var quantidadeJogadores = 5
+            var cadastrado = 1
 
             async function cadastrarTime(time) {
 
@@ -67,15 +78,30 @@
                     cidade: document.getElementById("cidade").value
                 }
 
-                fetch('http://127.0.0.1:8000/times', {
-                    method: "POST",
-                    body: JSON.stringify(_data),
-                    headers: {"Content-type": "application/json; charset=UTF-8"}
-                })  
-                .then(response => response.json())
+                if (cadastrado == 1) {
+                    fetch('http://127.0.0.1:8000/times', {
+                        method: "POST",
+                        body: JSON.stringify(_data),
+                        headers: {"Content-type": "application/json; charset=UTF-8"}
+                    })  
+                    .then(response => response.json())
 
-                document.getElementById('nome').disabled = true
-                document.getElementById('cidade').disabled = true
+                    if (document.getElementById('reserva').value.checked == true) {
+                        quantidadeJogadores = await 6
+                    } else {
+                        quantidadeJogadores = await 5
+                    }
+
+                    document.getElementById('nome').disabled = true
+                    document.getElementById('cidade').disabled = true
+                    document.getElementById('reserva').disabled = 
+                    
+                    _data = {}
+
+                    cadastrado = await 0
+                }
+
+                console.log(await cadastrado)
 
                 procurarTime(time)
             }
@@ -98,6 +124,7 @@
 
             async function cadatrarJogadores(objeto) {
 
+
                 let _data = {
                     nome: document.getElementById("jogador").value,
                     nick: document.getElementById("nick").value,
@@ -114,7 +141,7 @@
 
                 console.log(acum)
                 
-                if (acum <= 6) {
+                if (acum <= quantidadeJogadores) {
                     fetch('http://127.0.0.1:8000/jogadores', {
                         method: "POST",
                         body: JSON.stringify(_data),
@@ -133,8 +160,18 @@
 
                     document.getElementById('jogadorTexto').innerHTML = "JOGADOR " + acum
 
+                    _data = {}
+
                 } else {
-                    acum = 1
+
+                    fetch('http://127.0.0.1:8000/jogadores', {
+                        method: "POST",
+                        body: JSON.stringify(_data),
+                        headers: {"Content-type": "application/json; charset=UTF-8"}
+                    })  
+                    .then(response => response.json())
+                    .then(json => console.log(json))
+                    .catch(err => console.log(err));
 
                     document.getElementById("jogador").value=""
                     document.getElementById("nick").value=""
@@ -143,10 +180,26 @@
                     document.getElementById("steam").value=""
                     document.getElementById("gamersclub").value=""
 
-                    document.getElementById('nome').disabled = falso
-                    document.getElementById('cidade').disabled = falso
+                    document.getElementById('jogadorTexto').innerHTML = "JOGADOR " + acum
+
+                    _data = {}
+                    
+                    acum = 1
+                    cadastrado = await 1
+
+                    document.getElementById("jogador").value=""
+                    document.getElementById("nick").value=""
+                    document.getElementById("patente").value=""
+                    document.getElementById("funcao").value=""
+                    document.getElementById("steam").value=""
+                    document.getElementById("gamersclub").value=""
+
+                    document.getElementById('nome').disabled = false
+                    document.getElementById('cidade').disabled = false
+                    document.getElementById('reserva').disabled = false
                     document.getElementById('nome').value=""
                     document.getElementById('cidade').value=""
+                    document.getElementById('reserva').value=null
 
                     document.getElementById('jogadorTexto').innerHTML = "JOGADOR 1"
 
