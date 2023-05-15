@@ -38,7 +38,8 @@ O projeto conta com 3 frentes:
       <li>http://localhost:8000/times/ </li>
         
             1. Método GET: Podemos solicitar todos os times cadastrados no banco de dados e com a extensão "?search=PALAVRA" na URL podemos pesquisar por times especificos com a "palavra" como nome </li>
-            	2. Método POST: Podemos adicionar adicionar times no banco de dados com o formato de JSON abaixo
+            2. Método POST: Podemos adicionar adicionar times no banco de dados com o formato de JSON abaixo
+    
           1.     {
           2.       "nome": "string",
           3.        "cidade": "string"
