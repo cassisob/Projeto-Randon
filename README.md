@@ -16,7 +16,7 @@ O projeto conta com 3 frentes:
           1. nome : str
           2. cidade : str
           3. id : int (chave primaria)
-        b. Table Jogador
+        <ol> b. Table Jogador
         
           1. nome : str
           2. nick : str
@@ -26,7 +26,7 @@ O projeto conta com 3 frentes:
           6. gamersClub : str
           7. time_id : int (chave estranjeira para relacionar o jogador com o time)
           8. id : int (chave primaria)
-       c. Table Coach
+       <ol> c. Table Coach
        
           1. nome : str
           2. nick : str
