@@ -1,0 +1,15 @@
+CREATE TABLE `randonbd`.`empresax` ( -- CRIA UMA TABELA NO SQL
+  `id` INT NOT NULL,
+  `funcionarios` INT NOT NULL,
+  `vendas` FLOAT NOT NULL,
+  `cidade` VARCHAR(45) NOT NULL,
+  `genero` VARCHAR(45) NOT NULL,
+  `idade` VARCHAR(45) NOT NULL,
+  `horas_trabalhadas` FLOAT NOT NULL,
+  PRIMARY KEY (`id`));
+
+
+
+SELECT * FROM randonbd.empresax; -- SELECIONA TODA TABELA
+
+SELECT ESPECIFICO FROM randonbd.empresax; -- SELECIONA ALGUMA COLUNA ESPECIFICA DA TABELA
