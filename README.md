@@ -11,12 +11,12 @@ Para rodar o projeto intale as seguintes biliotecas com pip:
 O projeto conta com 3 frentes:
   1. Banco de Dados
       <ol>Banco de dados com os seguintes dados:
-        <li>a. Table Times </li>
+        <li>Table Times </li>
         
           1. nome : str
           2. cidade : str
           3. id : int (chave primaria)
-        <li>b. Table Jogador </li>
+        <li>Table Jogador </li>
         
           1. nome : str
           2. nick : str
@@ -26,7 +26,7 @@ O projeto conta com 3 frentes:
           6. gamersClub : str
           7. time_id : int (chave estranjeira para relacionar o jogador com o time)
           8. id : int (chave primaria)
-       <li>c. Table Coach </li>
+       <li>Table Coach </li>
        
           1. nome : str
           2. nick : str
@@ -35,7 +35,7 @@ O projeto conta com 3 frentes:
   <ol>
   2. API
     <ol> API desenvolvida em python com a biblioteca FASTAPI com as seguintes rotas
-      <li>a. http://localhost:8000/times/ </li>
+      <li>http://localhost:8000/times/ </li>
         
           1. Método GET: Podemos solicitar todos os times cadastrados no banco de dados e com a extensão "?search=PALAVRA" na URL podemos pesquisar por times especificos com a "palavra" como nome </li>
           2. Método POST: Podemos adicionar adicionar times no banco de dados com o formato de JSON abaixo
@@ -45,7 +45,7 @@ O projeto conta com 3 frentes:
                 }
           3. Método DELETE: Podemos deletar uma equipe do banco de dados, enviando o id da mesma na url após "times/"
 teste
-    <li> b. http://localhost:8000/jogadores/ </li>
+    <li> http://localhost:8000/jogadores/ </li>
     
             1. Método GET: Podemos solicitar todos os jogadores cadastrados no banco de dados e com a extensão "?search=PALAVRA" na URL podemos pesquisar por jogadores especificos com a "palavra" como nome
             2. Método POST: Podemos adicionar adicionar jogadores no banco de dados com o formato de JSON abaixo
