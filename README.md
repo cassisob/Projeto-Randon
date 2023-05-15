@@ -73,6 +73,6 @@ O projeto conta com 3 frentes:
     
   <li> 3. Página WEB </li>
               
-            A pagina WEB foi criada a fim de cadastrar times e jogadores dentro do banco de dados.
+            A pagina WEB foi criada a fim de cadastrar times e jogadores dentro do banco de dados. Não existe a opção de deletar ou ver os times e os jogadores cadastrados.
             Nela podemos ver um ambiente bonito e com muitos elementos de JavaScript.
                 
