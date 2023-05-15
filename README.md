@@ -8,6 +8,7 @@ Para rodar o projeto é preciso seguir os seguintes passos:
 2. pip install uvicorn
 3. pip install sqlalchemy
 4. uvicorn main:app --reload
+5. Abrir a pagina WEB ou ir para http://localhost:8000/docs/
 
 O projeto conta com 3 frentes:
     <li>1. Banco de Dados</li>
