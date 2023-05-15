@@ -32,6 +32,6 @@ O projeto conta com 3 frentes:
           2. nick : str
           3. time_id : int (chave estranjeira para relacionar o jogador com o time)
           4. id : int (chave primaria)
-  <ol>
+  <ul>
   
   2. API
