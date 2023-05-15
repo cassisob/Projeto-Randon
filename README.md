@@ -46,16 +46,17 @@ O projeto conta com 3 frentes:
       <ol>
       <ol> b. http://localhost:8000/jogadores/
             <li>1. Método GET: Podemos solicitar todos os jogadores cadastrados no banco de dados e com a extensão "?search=PALAVRA" na URL podemos pesquisar por jogadores especificos com a "palavra" como nome </li>
-            <li>2. Método POST: Podemos adicionar adicionar jogadores no banco de dados com o formato de JSON abaixo </li>
-          {
-            "nome": "string",
-            "nick": "string",
-            "patente": "string",
-            "funcao": "string",
-            "steam": "string",
-            "gamersClub": "string",
-            "time_id": 0
-          }
+            <li>2. Método POST: Podemos adicionar adicionar jogadores no banco de dados com o formato de JSON abaixo </li
+              
+          1. {
+          2.   "nome": "string",
+          3.   "nick": "string",
+          4.   "patente": "string",
+          5.   "funcao": "string",
+          6.   "steam": "string",
+          7.   "gamersClub": "string",
+          8.   "time_id": 0
+          9. }
             <li>3. Método DELETE: Podemos deletar uma equipe do banco de dados, enviando o id da mesma na url após "times/"
        
             
