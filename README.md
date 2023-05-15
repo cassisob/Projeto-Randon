@@ -4,9 +4,9 @@ Projeto de teste by @cassisob
 
 Para rodar o projeto intale as seguintes biliotecas com pip
 
-pip install fastapi
-pip install uvicorn
-pip install sqlalchemy
+1. pip install fastapi
+2. pip install uvicorn
+3. pip install sqlalchemy
 
 O projeto conta com 3 frentes:
   1. Banco de Dados
