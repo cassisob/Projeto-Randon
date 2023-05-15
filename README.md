@@ -33,7 +33,7 @@ O projeto conta com 3 frentes:
           3. time_id : int (chave estranjeira para relacionar o jogador com o time)
           4. id : int (chave primaria)
   
-  2. API
+  2. API <ol>
       <li>http://localhost:8000/times/ </li>
         
             1. Método GET: Podemos solicitar todos os times cadastrados no banco de dados e com a extensão "?search=PALAVRA" na URL podemos pesquisar por times especificos com a "palavra" como nome </li>
@@ -66,3 +66,4 @@ O projeto conta com 3 frentes:
           
           
  Não foi criado o método PUT devido ao tamanho decidido do projeto durante a fase de idealização 
+<ol>
