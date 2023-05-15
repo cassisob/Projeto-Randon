@@ -46,7 +46,7 @@ O projeto conta com 3 frentes:
       <ol>
       <ol> b. http://localhost:8000/jogadores/
             <li>1. Método GET: Podemos solicitar todos os jogadores cadastrados no banco de dados e com a extensão "?search=PALAVRA" na URL podemos pesquisar por jogadores especificos com a "palavra" como nome </li>
-            <li>2. Método POST: Podemos adicionar adicionar jogadores no banco de dados com o formato de JSON abaixo </li
+            <li>2. Método POST: Podemos adicionar adicionar jogadores no banco de dados com o formato de JSON abaixo </li>
               
           1. {
           2.   "nome": "string",
@@ -59,7 +59,7 @@ O projeto conta com 3 frentes:
           9. }
               
             
-        <li>3. Método DELETE: Podemos deletar um jogador do banco de dados, enviando o id do mesmo na url após "jogadores/"
+        <li>3. Método DELETE: Podemos deletar um jogador do banco de dados, enviando o id do mesmo na url após "jogadores/" </li>
       
             
     
