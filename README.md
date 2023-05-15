@@ -61,4 +61,5 @@ O projeto conta com 3 frentes:
     
             
 <li>3. Método DELETE: Podemos deletar um jogador do banco de dados, enviando o id do mesmo na url após "jogadores/" </li>
+        <ol>
         
