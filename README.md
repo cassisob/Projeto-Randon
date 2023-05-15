@@ -2,7 +2,7 @@
 
 Projeto de teste by @cassisob
 
-Para rodar o projeto intale as seguintes biliotecas com pip
+Para rodar o projeto intale as seguintes biliotecas com pip:
 
 1. pip install fastapi
 2. pip install uvicorn
