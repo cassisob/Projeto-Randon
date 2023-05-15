@@ -13,13 +13,13 @@ O projeto conta com 3 frentes:
       Banco de dados com os seguintes dados:
         <ol> a. Table Times
         
-          <li> nome : str </li>
-          <li> cidade : str </li>
-          <li> id : int (chave primaria) </li>
+          1. nome : str
+          2. cidade : str
+          3. id : int (chave primaria)
         b. Table Jogador
         
-          <li> nome : str
-          <li> nick : str
+          1. nome : str
+          2. nick : str
           3. patente : str
           4. funcao : str
           5. steam : str
