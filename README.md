@@ -65,7 +65,7 @@ O projeto conta com 3 frentes:
                   5.   "funcao": "string",
                   6.   "steam": "string",
                   7.   "gamersClub": "string",
-                  8.   "time_id": 0
+                  8.   "time_id": "int"
                   9. }
 
             3. Método DELETE: Podemos deletar um jogador do banco de dados, enviando o id do mesmo na url após "jogadores/"
